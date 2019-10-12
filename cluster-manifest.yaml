@@ -1,0 +1,761 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-12T04:13:53Z"
+    generateName: app-5cbbb45884-
+    labels:
+      pod-template-hash: 5cbbb45884
+      run: app
+    name: app-5cbbb45884-hgwng
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: app-5cbbb45884
+      uid: b3a5ed5c-eca6-11e9-8c0e-0a04b4d5fd66
+    resourceVersion: "22534"
+    selfLink: /api/v1/namespaces/default/pods/app-5cbbb45884-hgwng
+    uid: b3a67e13-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    containers:
+    - image: tomcat
+      imagePullPolicy: Always
+      name: app
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-h4sf9
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: worker2
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-h4sf9
+      secret:
+        defaultMode: 420
+        secretName: default-token-h4sf9
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:53Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:55Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:55Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:53Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://6712b4fe6cfa8744fab4d418f37bac7888139d1d0670b39a151809740b86e65a
+      image: tomcat:latest
+      imageID: docker-pullable://tomcat@sha256:bb4ceffaf5aa2eba6c3ee0db46d863c8b23b263cb547dec0942e757598fd0c24
+      lastState: {}
+      name: app
+      ready: true
+      restartCount: 0
+      state:
+        running:
+          startedAt: "2019-10-12T04:13:55Z"
+    hostIP: 172.31.58.141
+    phase: Running
+    podIP: 10.38.0.2
+    qosClass: BestEffort
+    startTime: "2019-10-12T04:13:53Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-12T04:13:53Z"
+    generateName: app-5cbbb45884-
+    labels:
+      pod-template-hash: 5cbbb45884
+      run: app
+    name: app-5cbbb45884-xfkm4
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: app-5cbbb45884
+      uid: b3a5ed5c-eca6-11e9-8c0e-0a04b4d5fd66
+    resourceVersion: "22537"
+    selfLink: /api/v1/namespaces/default/pods/app-5cbbb45884-xfkm4
+    uid: b3a7e891-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    containers:
+    - image: tomcat
+      imagePullPolicy: Always
+      name: app
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-h4sf9
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: worker1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-h4sf9
+      secret:
+        defaultMode: 420
+        secretName: default-token-h4sf9
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:53Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:55Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:55Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:53Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://1c7bc71ef6ad596e310ff2c5eadfa29370912c26e139bb668f359e174c1320e4
+      image: tomcat:latest
+      imageID: docker-pullable://tomcat@sha256:bb4ceffaf5aa2eba6c3ee0db46d863c8b23b263cb547dec0942e757598fd0c24
+      lastState: {}
+      name: app
+      ready: true
+      restartCount: 0
+      state:
+        running:
+          startedAt: "2019-10-12T04:13:55Z"
+    hostIP: 172.31.52.114
+    phase: Running
+    podIP: 10.40.0.4
+    qosClass: BestEffort
+    startTime: "2019-10-12T04:13:53Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-12T04:13:35Z"
+    generateName: frontend-869958c666-
+    labels:
+      pod-template-hash: 869958c666
+      run: frontend
+    name: frontend-869958c666-fnnmb
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: frontend-869958c666
+      uid: a8b64ca5-eca6-11e9-8c0e-0a04b4d5fd66
+    resourceVersion: "22468"
+    selfLink: /api/v1/namespaces/default/pods/frontend-869958c666-fnnmb
+    uid: a8b8ee77-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    containers:
+    - image: httpd
+      imagePullPolicy: Always
+      name: frontend
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-h4sf9
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: worker2
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-h4sf9
+      secret:
+        defaultMode: 420
+        secretName: default-token-h4sf9
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:35Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:37Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:37Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:35Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://20cb1f366dc389e523355e587788ba84c7fe45cd4d6b08ad81db59fc1f477dc7
+      image: httpd:latest
+      imageID: docker-pullable://httpd@sha256:39d7d9a3ab93c0ad68ee7ea237722ed1b0016ff6974d80581022a53ec1e58797
+      lastState: {}
+      name: frontend
+      ready: true
+      restartCount: 0
+      state:
+        running:
+          startedAt: "2019-10-12T04:13:36Z"
+    hostIP: 172.31.58.141
+    phase: Running
+    podIP: 10.38.0.1
+    qosClass: BestEffort
+    startTime: "2019-10-12T04:13:35Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-12T04:13:35Z"
+    generateName: frontend-869958c666-
+    labels:
+      pod-template-hash: 869958c666
+      run: frontend
+    name: frontend-869958c666-k2558
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: frontend-869958c666
+      uid: a8b64ca5-eca6-11e9-8c0e-0a04b4d5fd66
+    resourceVersion: "22474"
+    selfLink: /api/v1/namespaces/default/pods/frontend-869958c666-k2558
+    uid: a8b7dc27-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    containers:
+    - image: httpd
+      imagePullPolicy: Always
+      name: frontend
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-h4sf9
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: worker1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-h4sf9
+      secret:
+        defaultMode: 420
+        secretName: default-token-h4sf9
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:35Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:37Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:37Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:35Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://f903b073f2f4a0f8c46ea7b4e8adc161b09041f0b5c705ffe4e74f33a6ed424d
+      image: httpd:latest
+      imageID: docker-pullable://httpd@sha256:39d7d9a3ab93c0ad68ee7ea237722ed1b0016ff6974d80581022a53ec1e58797
+      lastState: {}
+      name: frontend
+      ready: true
+      restartCount: 0
+      state:
+        running:
+          startedAt: "2019-10-12T04:13:36Z"
+    hostIP: 172.31.52.114
+    phase: Running
+    podIP: 10.40.0.2
+    qosClass: BestEffort
+    startTime: "2019-10-12T04:13:35Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-12T04:13:35Z"
+    generateName: frontend-869958c666-
+    labels:
+      pod-template-hash: 869958c666
+      run: frontend
+    name: frontend-869958c666-pxgdh
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: frontend-869958c666
+      uid: a8b64ca5-eca6-11e9-8c0e-0a04b4d5fd66
+    resourceVersion: "22472"
+    selfLink: /api/v1/namespaces/default/pods/frontend-869958c666-pxgdh
+    uid: a8b8e921-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    containers:
+    - image: httpd
+      imagePullPolicy: Always
+      name: frontend
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-h4sf9
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: worker1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-h4sf9
+      secret:
+        defaultMode: 420
+        secretName: default-token-h4sf9
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:35Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:37Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:37Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T04:13:35Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://b2c3ddb9fc32025e5ea9cf549717ad8198f7e1c3c4739b134d848a968ca168f8
+      image: httpd:latest
+      imageID: docker-pullable://httpd@sha256:39d7d9a3ab93c0ad68ee7ea237722ed1b0016ff6974d80581022a53ec1e58797
+      lastState: {}
+      name: frontend
+      ready: true
+      restartCount: 0
+      state:
+        running:
+          startedAt: "2019-10-12T04:13:37Z"
+    hostIP: 172.31.52.114
+    phase: Running
+    podIP: 10.40.0.3
+    qosClass: BestEffort
+    startTime: "2019-10-12T04:13:35Z"
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2019-10-12T04:14:01Z"
+    labels:
+      run: app
+    name: app
+    namespace: default
+    resourceVersion: "22551"
+    selfLink: /api/v1/namespaces/default/services/app
+    uid: b89ebc1a-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    clusterIP: 10.107.176.249
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      run: app
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2019-10-12T04:13:43Z"
+    labels:
+      run: frontend
+    name: frontend
+    namespace: default
+    resourceVersion: "22490"
+    selfLink: /api/v1/namespaces/default/services/frontend
+    uid: addf40b4-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    clusterIP: 10.108.52.63
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      run: frontend
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2019-10-11T23:04:11Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "156"
+    selfLink: /api/v1/namespaces/default/services/kubernetes
+    uid: 7013430f-ec7b-11e9-bb59-0a57f66eac1c
+  spec:
+    clusterIP: 10.96.0.1
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 6443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-10-12T04:13:53Z"
+    generation: 1
+    labels:
+      run: app
+    name: app
+    namespace: default
+    resourceVersion: "22539"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/app
+    uid: b3a55c75-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 2
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        run: app
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          run: app
+      spec:
+        containers:
+        - image: tomcat
+          imagePullPolicy: Always
+          name: app
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    conditions:
+    - lastTransitionTime: "2019-10-12T04:13:55Z"
+      lastUpdateTime: "2019-10-12T04:13:55Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2019-10-12T04:13:53Z"
+      lastUpdateTime: "2019-10-12T04:13:55Z"
+      message: ReplicaSet "app-5cbbb45884" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+    updatedReplicas: 2
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-10-12T04:13:35Z"
+    generation: 1
+    labels:
+      run: frontend
+    name: frontend
+    namespace: default
+    resourceVersion: "22477"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/frontend
+    uid: a8b55765-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        run: frontend
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          run: frontend
+      spec:
+        containers:
+        - image: httpd
+          imagePullPolicy: Always
+          name: frontend
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2019-10-12T04:13:37Z"
+      lastUpdateTime: "2019-10-12T04:13:37Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2019-10-12T04:13:35Z"
+      lastUpdateTime: "2019-10-12T04:13:37Z"
+      message: ReplicaSet "frontend-869958c666" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-10-12T04:13:53Z"
+    generation: 1
+    labels:
+      pod-template-hash: 5cbbb45884
+      run: app
+    name: app-5cbbb45884
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: app
+      uid: b3a55c75-eca6-11e9-8c0e-0a04b4d5fd66
+    resourceVersion: "22538"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/app-5cbbb45884
+    uid: b3a5ed5c-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        pod-template-hash: 5cbbb45884
+        run: app
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          pod-template-hash: 5cbbb45884
+          run: app
+      spec:
+        containers:
+        - image: tomcat
+          imagePullPolicy: Always
+          name: app
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-10-12T04:13:35Z"
+    generation: 1
+    labels:
+      pod-template-hash: 869958c666
+      run: frontend
+    name: frontend-869958c666
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: frontend
+      uid: a8b55765-eca6-11e9-8c0e-0a04b4d5fd66
+    resourceVersion: "22476"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/frontend-869958c666
+    uid: a8b64ca5-eca6-11e9-8c0e-0a04b4d5fd66
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        pod-template-hash: 869958c666
+        run: frontend
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          pod-template-hash: 869958c666
+          run: frontend
+      spec:
+        containers:
+        - image: httpd
+          imagePullPolicy: Always
+          name: frontend
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
